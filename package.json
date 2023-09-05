@@ -8,10 +8,6 @@
     "uuid": "^9.0.0",
     "uuidv4": "^6.2.13"
   },
-  "engines": {
-    "node": ">=16.14",
-    "npm": "8.x"
-  },
   "scripts": {
     "start": "npx nodemon index.js"
   }

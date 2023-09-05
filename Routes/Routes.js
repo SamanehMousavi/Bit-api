@@ -20,6 +20,6 @@ router.post("/addProject", addProject);
 router.delete("/deleteProject/:user/:projectId", deleteProject);
 router.get("/getProject/:user/:projectId", getProject);
 router.patch("/updateproject", updateProject);
-router.get("/getuser", getUser);
+router.get("/getUser", getUser);
 
 module.exports = router;
