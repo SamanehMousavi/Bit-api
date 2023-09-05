@@ -1,0 +1,25 @@
+const router = require("express").Router();
+const { gettasklists } = require("../handlers/TaskListHandlers/getTaskLists");
+const { addUser } = require("../handlers/TaskListHandlers/AddUser");
+const { addTask } = require("../handlers/TaskListHandlers/addTask");
+const { updateTask } = require("../handlers/TaskListHandlers/updateTask");
+const { deleteTask } = require("../handlers/TaskListHandlers/deleteTask");
+const { getProjects } = require("../handlers/ProjectHandlers/getProjects");
+const { addProject } = require("../handlers/ProjectHandlers/addProject");
+const { deleteProject } = require("../handlers/ProjectHandlers/deleteProject");
+const { getProject } = require("../handlers/ProjectHandlers/getProject");
+const { updateProject } = require("../handlers/ProjectHandlers/updateProject");
+const { getUser } = require("../handlers/projectHandlers/getUser");
+router.get("/tasklist/:date/:user", gettasklists);
+router.post("/adduser", addUser);
+router.post("/addtask", addTask);
+router.patch("/updatetask", updateTask);
+router.delete("/deleteTask/:date/:user/:index", deleteTask);
+router.get("/getprojects/:user", getProjects);
+router.post("/addProject", addProject);
+router.delete("/deleteProject/:user/:projectId", deleteProject);
+router.get("/getProject/:user/:projectId", getProject);
+router.patch("/updateproject", updateProject);
+router.get("/getuser", getUser);
+
+module.exports = router;
