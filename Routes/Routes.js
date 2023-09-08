@@ -9,7 +9,7 @@ const { addProject } = require("../handlers/ProjectHandlers/addProject");
 const { deleteProject } = require("../handlers/ProjectHandlers/deleteProject");
 const { getProject } = require("../handlers/ProjectHandlers/getProject");
 const { updateProject } = require("../handlers/ProjectHandlers/updateProject");
-const { getUser } = require("../handlers/projectHandlers/getUser");
+const { getUser } = require("../handlers/ProjectHandlers/getUser");
 router.get("/tasklist/:date/:user", gettasklists);
 router.post("/adduser", addUser);
 router.post("/addtask", addTask);
