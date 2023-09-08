@@ -3,7 +3,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const router = require("./Routes/Routes");
-
+const cors = require("cors");
 const PORT = 4000;
 
 express()
@@ -19,6 +19,7 @@ express()
     next();
   })
   .use(morgan("tiny"))
+  .use(cors())
   .use(express.static("./server/assets"))
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
