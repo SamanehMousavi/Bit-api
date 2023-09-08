@@ -12,7 +12,7 @@ const options = {
 
 const gettasklists = async (request, response) => {
   const { date, user } = request.params;
-
+  console.log(date);
   const client = new MongoClient(MONGO_URI, options);
 
   try {
