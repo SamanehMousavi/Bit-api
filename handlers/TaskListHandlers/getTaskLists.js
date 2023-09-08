@@ -14,11 +14,11 @@ const gettasklists = async (request, response) => {
   const { date, user } = request.params;
   console.log(date);
   const client = new MongoClient(MONGO_URI, options);
-
+  console.log(MONGO_URI);
   try {
     await client.connect();
     const db = client.db("FinalProject");
-
+    console.log("connect");
     const listData = await db.collection("Users").findOne({ _id: user });
     console.log(listData.lists);
     const taskList = listData.lists[date];
